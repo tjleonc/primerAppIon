@@ -1,11 +1,39 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Home</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-<ion-text color="primary" class="ion-margin ion-text-center">
-  <h1>Este es el Home</h1>
-</ion-text>
-</ion-content>
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+  <ion-list>
+    <ion-menu-toggle auto-hide="false">
+      <ion-item routerLink="/home"> <!--routerlink: donde nos mandará-->
+        <ion-icon slot="start" name="home" color="success"></ion-icon> <!--slot: donde irá el icono. Start al prinicpio y End al final-->
+        <ion-label>Home</ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+    <ion-menu-toggle auto-hide="false">
+      <ion-item routerLink="/botones">
+        <ion-icon slot="start" name="square" color="primary"></ion-icon>
+        <ion-label>Botones</ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+    <ion-menu-toggle auto-hide="false">
+      <ion-item routerLink="/alertas">
+        <ion-icon slot="start" name="alert" color="danger"></ion-icon>
+        <ion-label>Alertas</ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+  </ion-list>
+  </ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding ion-text-center"> -Contenido Home- </ion-content>
+</div>
