@@ -1,32 +1,39 @@
 <ion-menu contentId="main-content">
   <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu</ion-title>
+    <ion-toolbar color="primary">
+      <ion-title>Menú</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-content class="ion-padding">
+  <ion-content class="ion-padding" color="primary">
   <ion-list>
     <ion-menu-toggle auto-hide="false">
-      <ion-item routerLink="/home"> <!--routerlink: donde nos mandará-->
+      <ion-item routerLink="/home" color="secondary"> <!--routerlink: donde nos mandará-->
         <ion-icon slot="start" name="home" color="success"></ion-icon> <!--slot: donde irá el icono. Start al prinicpio y End al final-->
-        <ion-label>Home</ion-label>
+        <ion-label color="dark" > <b>Home</b></ion-label>
       </ion-item>
     </ion-menu-toggle>
     <ion-menu-toggle auto-hide="false">
-      <ion-item routerLink="/botones">
+      <ion-item routerLink="/botones" color="secondary">
         <ion-icon slot="start" name="square" color="primary"></ion-icon>
-        <ion-label>Botones</ion-label>
+        <ion-label color="dark" > <b>Botones</b></ion-label>
       </ion-item>
     </ion-menu-toggle>
     <ion-menu-toggle auto-hide="false">
-      <ion-item routerLink="/alertas">
+      <ion-item routerLink="/alertas" color="secondary">
         <ion-icon slot="start" name="alert" color="danger"></ion-icon>
-        <ion-label>Alertas</ion-label>
+        <ion-label color="dark" > <b>Alertas</b></ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+    <ion-menu-toggle auto-hide="false">
+      <ion-item routerLink="/formulario" color="secondary">
+        <ion-icon slot="start" name="newspaper-outline" color="warning"></ion-icon>
+        <ion-label color="dark"><b>Formulario</b></ion-label>
       </ion-item>
     </ion-menu-toggle>
   </ion-list>
   </ion-content>
 </ion-menu>
+
 <div class="ion-page" id="main-content">
   <ion-header>
     <ion-toolbar>
@@ -35,5 +42,10 @@
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
-  <ion-content class="ion-padding ion-text-center"> -Contenido Home- </ion-content>
+  <ion-content class="ion-padding ion-text-center" color="primary"> 
+    <h1>
+      <b>HOME</b>
+    </h1>
+  </ion-content>
 </div>
+
